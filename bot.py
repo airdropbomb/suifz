@@ -63,7 +63,7 @@ def send_faucet_msg(token, address, channel_id, acc_idx):
 
 def account_worker(token, address, channel_id, acc_idx):
     # Initial random stagger to prevent all accounts sending at the exact same second
-    initial_delay = acc_idx * random.randint(45, 120)
+    initial_delay = acc_idx * random.randint(15, 30)
     log_msg(acc_idx, f"Wait {initial_delay}s for initial stagger...", Fore.YELLOW)
     time.sleep(initial_delay)
 
